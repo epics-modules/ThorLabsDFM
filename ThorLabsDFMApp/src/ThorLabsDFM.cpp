@@ -53,7 +53,7 @@ void error_exit(ViSession instrHdl, ViStatus err)
 }
 
 ThorLabsDFM::ThorLabsDFM(const char *portName, const char *resourceIn)
-    : asynPortDriver(portName, THORLABS_MAX_SEGMENT_VOLTAGES,
+    : asynPortDriver(portName, THORLABS_MAX_ADDR,
             asynInt32Mask | asynFloat64Mask | asynOctetMask | asynDrvUserMask,
             asynInt32Mask | asynFloat64Mask | asynOctetMask,
             ASYN_CANBLOCK, 1, 0, 0)
@@ -117,7 +117,7 @@ ThorLabsDFM::ThorLabsDFM(const char *portName, const char *resourceIn)
     
 	// Open session to instrument
 	printf("Opening session to '%s' ...\n", resourceName_);
-	err = TLDFM_init(resourceName_, VI_TRUE, VI_FALSE, &instrHdl_);
+	err = TLDFMX_init(resourceName_, VI_TRUE, VI_FALSE, &instrHdl_);
 	if(err) error_exit(instrHdl_, err);  // can not open session to instrument
 
   err = TLDFM_get_device_configuration (instrHdl_,
@@ -135,9 +135,12 @@ ThorLabsDFM::ThorLabsDFM(const char *portName, const char *resourceIn)
     createParam(TLDFM_MeasuredSegmentVoltsString,   asynParamFloat64, &TLDFM_MeasuredSegmentVolts);
     createParam(TLDFM_MeasuredTiltVoltsString,      asynParamFloat64, &TLDFM_MeasuredTiltVolts);
     createParam(TLDFM_SetSegmentVoltsString,        asynParamFloat64, &TLDFM_SetSegmentVolts);
+    createParam(TLDFM_ResetSegmentVoltsString,      asynParamInt32,   &TLDFM_ResetSegmentVolts);
     createParam(TLDFM_SetTiltVoltsString,           asynParamFloat64, &TLDFM_SetTiltVolts);
     createParam(TLDFM_SetTiltAmplitudeString,       asynParamFloat64, &TLDFM_SetTiltAmplitude);
     createParam(TLDFM_SetTiltAngleString,           asynParamFloat64, &TLDFM_SetTiltAngle);
+    createParam(TLDFM_SetZernikeValueString,        asynParamFloat64, &TLDFM_SetZernikeValue);
+    createParam(TLDFM_ResetZernikeValuesString,     asynParamInt32,   &TLDFM_ResetZernikeValues);
     createParam(TLDFM_TemperatureString,            asynParamFloat64, &TLDFM_Temperature);
     
     // This allows the initial values of the ao records for the voltages to be read from the device
@@ -199,6 +202,8 @@ asynStatus ThorLabsDFM::writeInt32( asynUser *pasynUser, epicsInt32 value)
     int function = pasynUser->reason;
   	ViStatus err;
     int address;
+    double zernikeValues[THORLABS_MAX_ZERNIKE_VALUES];
+    double voltages[THORLABS_MAX_SEGMENT_VOLTAGES];
     const char* functionName = "writeInt32";
 
     this->getAddress(pasynUser, &address);
@@ -215,6 +220,25 @@ asynStatus ThorLabsDFM::writeInt32( asynUser *pasynUser, epicsInt32 value)
             goto done;
         }
     }
+    else if (function == TLDFM_ResetSegmentVolts) {
+        for (int i=0; i<THORLABS_MAX_SEGMENT_VOLTAGES; i++) {
+            setDoubleParam(i, TLDFM_SetSegmentVolts, THORLABS_RESET_VOLTAGE_VALUE);
+            voltages[i] = THORLABS_RESET_VOLTAGE_VALUE;
+        }
+        err = TLDFM_set_segment_voltages(instrHdl_, voltages);
+    }
+    else if (function == TLDFM_ResetZernikeValues) {
+        for (int i=0; i<THORLABS_MAX_ZERNIKE_VALUES; i++) {
+            setDoubleParam(i, TLDFM_SetZernikeValue, THORLABS_RESET_ZERNIKE_VALUE);
+            zernikeValues[i] = THORLABS_RESET_ZERNIKE_VALUE;
+        }
+        err = TLDFMX_calculate_zernike_pattern(instrHdl_, Z_All_Flag, zernikeValues, voltages);
+        if (err) goto done;
+        for (int i=0; i<THORLABS_MAX_SEGMENT_VOLTAGES; i++) {
+            setDoubleParam(i, TLDFM_SetSegmentVolts, voltages[i]);
+        }
+        err = TLDFM_set_segment_voltages(instrHdl_, voltages);
+    }
     done:
     if (err) {
         const char *paramName;
@@ -225,6 +249,7 @@ asynStatus ThorLabsDFM::writeInt32( asynUser *pasynUser, epicsInt32 value)
             driverName, functionName, paramName, err, errorMessage_);
         return asynError;
     }
+    
     return asynSuccess;
 }
 
@@ -234,6 +259,8 @@ asynStatus ThorLabsDFM::writeFloat64( asynUser *pasynUser, epicsFloat64 value)
     int function = pasynUser->reason;
   	ViStatus err = 0;
     int address;
+    double zernikeValues[THORLABS_MAX_ZERNIKE_VALUES];
+    double voltages[THORLABS_MAX_SEGMENT_VOLTAGES];
     const char *functionName = "writeFloat64";
 
     this->getAddress(pasynUser, &address);
@@ -254,7 +281,19 @@ asynStatus ThorLabsDFM::writeFloat64( asynUser *pasynUser, epicsFloat64 value)
         // We use % for amplitude, SDK wants 0-1.
         err = TLDFM_set_tilt_amplitude_angle(instrHdl_, amplitude/100., angle);
     }
+    else if (function == TLDFM_SetZernikeValue) {
+        for (int i=0; i<THORLABS_MAX_ZERNIKE_VALUES; i++) {
+           getDoubleParam(i, TLDFM_SetZernikeValue, &zernikeValues[i]);
+        }
+        err = TLDFMX_calculate_zernike_pattern(instrHdl_, Z_All_Flag, zernikeValues, voltages);
+        if (err) goto done;
+        for (int i=0; i<THORLABS_MAX_SEGMENT_VOLTAGES; i++) {
+            setDoubleParam(i, TLDFM_SetSegmentVolts, voltages[i]);
+        }
+        err = TLDFM_set_segment_voltages(instrHdl_, voltages);
+    }
 
+    done:
     if (err) {
         const char *paramName;
         this->getParamName(function, &paramName);
@@ -265,7 +304,9 @@ asynStatus ThorLabsDFM::writeFloat64( asynUser *pasynUser, epicsFloat64 value)
         return asynError;
     }
     /* Call the callback */
-    callParamCallbacks(address);
+    for (int i=0; i<THORLABS_MAX_ADDR; i++) {
+        callParamCallbacks(i);
+    }
     return asynSuccess;
 }
 
