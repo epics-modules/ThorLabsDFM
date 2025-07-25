@@ -2,20 +2,27 @@
 #define THORLABSDFM_H
 
 #include <asynPortDriver.h>
-#include <TLDFM.h>
+#include <TLDFMX.h>
 
 #define THORLABS_MAX_SEGMENT_VOLTAGES  40
 #define THORLABS_MAX_TILT_VOLTAGES      3
+#define THORLABS_MAX_ZERNIKE_VALUES    12
 #define THORLABS_MAX_TEMPERATURES       4
+#define THORLABS_RESET_VOLTAGE_VALUE  100
+#define THORLABS_RESET_ZERNIKE_VALUE    0
+#define THORLABS_MAX_ADDR THORLABS_MAX_SEGMENT_VOLTAGES
 
 /* Internal asyn driver parameters */
 #define TLDFM_ReadStatusString               "TLDFM_ReadStatus"
 #define TLDFM_MeasuredSegmentVoltsString     "TLDFM_MeasuredSegmentVolts"
 #define TLDFM_MeasuredTiltVoltsString        "TLDFM_MeasuredTiltVolts"
 #define TLDFM_SetSegmentVoltsString          "TLDFM_SetSegmentVolts"
+#define TLDFM_ResetSegmentVoltsString        "TLDFM_ResetSegmentVolts"
 #define TLDFM_SetTiltVoltsString             "TLDFM_SetTiltVolts"
 #define TLDFM_SetTiltAmplitudeString         "TLDFM_SetTiltAmplitude"
 #define TLDFM_SetTiltAngleString             "TLDFM_SetTiltAngle"
+#define TLDFM_SetZernikeValueString          "TLDFM_SetZernikeValue"
+#define TLDFM_ResetZernikeValuesString       "TLDFM_ResetZernikeValues"
 #define TLDFM_TemperatureString              "TLDFM_Temperature"
 
 
@@ -38,9 +45,12 @@ protected:
     int TLDFM_MeasuredSegmentVolts;
     int TLDFM_MeasuredTiltVolts;
     int TLDFM_SetSegmentVolts;
+    int TLDFM_ResetSegmentVolts;
     int TLDFM_SetTiltVolts;
     int TLDFM_SetTiltAmplitude;
     int TLDFM_SetTiltAngle;
+    int TLDFM_SetZernikeValue;
+    int TLDFM_ResetZernikeValues;
     int TLDFM_Temperature;
 
 private:
