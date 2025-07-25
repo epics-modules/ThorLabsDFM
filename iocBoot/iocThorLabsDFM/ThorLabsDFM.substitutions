@@ -55,3 +55,21 @@ pattern
 {39,  38}
 {40,  39}
 }          
+
+file "$(THORLABSDFM)/db/ThorLabsDFM_ZernikeN.template"
+{
+pattern
+{NAME, ADDR}
+{Ast45,  0}
+{Def,    1}
+{Ast0,   2}
+{TreY,   3}
+{ComX,   4}
+{ComY,   5}
+{TreX,   6}
+{TetY,   7}
+{SAstY,  8}
+{SAb3,   9}
+{SAstX, 10}
+{TetX,  11}
+}          
