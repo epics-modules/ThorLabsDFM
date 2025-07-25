@@ -5,10 +5,10 @@ file {
 }
 display {
 	object {
-		x=206
-		y=126
+		x=560
+		y=283
 		width=1275
-		height=580
+		height=660
 	}
 	clr=14
 	bclr=4
@@ -111,42 +111,574 @@ text {
 	textix="ThorLabs Deformable Mirror ($(P)$(R))"
 	align="horiz. centered"
 }
+rectangle {
+	object {
+		x=150
+		y=40
+		width=150
+		height=21
+	}
+	"basic attribute" {
+		clr=2
+	}
+}
+rectangle {
+	object {
+		x=5
+		y=35
+		width=440
+		height=160
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+		width=1
+	}
+}
+text {
+	object {
+		x=160
+		y=40
+		width=130
+		height=20
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Tilt"
+	align="horiz. centered"
+}
+valuator {
+	object {
+		x=235
+		y=70
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)SetTiltAmplitude"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+valuator {
+	object {
+		x=235
+		y=95
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)SetTiltAngle"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+valuator {
+	object {
+		x=235
+		y=120
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)TiltArm1SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+valuator {
+	object {
+		x=235
+		y=145
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)TiltArm2SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+valuator {
+	object {
+		x=235
+		y=170
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)TiltArm3SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
 composite {
 	object {
-		x=100
-		y=300
-		width=235
-		height=20
+		x=15
+		y=70
+		width=130
+		height=120
 	}
 	"composite name"=""
 	children {
-		menu {
-			object {
-				x=215
-				y=300
-				width=120
-				height=20
-			}
-			control {
-				chan="$(P)$(R)ReadStatus.SCAN"
-				clr=14
-				bclr=51
-			}
-		}
 		text {
 			object {
-				x=100
-				y=300
+				x=35
+				y=120
 				width=110
 				height=20
 			}
 			"basic attribute" {
 				clr=14
 			}
-			textix="Status rate"
+			textix="Arm 1 volts"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=15
+				y=70
+				width=130
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Amplitude (%)"
+		}
+		text {
+			object {
+				x=35
+				y=95
+				width=110
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Angle (deg)"
+		}
+		text {
+			object {
+				x=35
+				y=145
+				width=110
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Arm 2 volts"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=35
+				y=170
+				width=110
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Arm 3 volts"
 			align="horiz. right"
 		}
 	}
+}
+composite {
+	object {
+		x=150
+		y=70
+		width=80
+		height=120
+	}
+	"composite name"=""
+	children {
+		"text entry" {
+			object {
+				x=150
+				y=120
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)TiltArm1SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=150
+				y=70
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)SetTiltAmplitude"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=150
+				y=95
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)SetTiltAngle"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=150
+				y=145
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)TiltArm2SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=150
+				y=170
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)TiltArm3SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=120
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)TiltArm1GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=145
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)TiltArm2GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=169
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)TiltArm3GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=70
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)SetTiltAmplitude_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=95
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)SetTiltAngle_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+composite {
+	object {
+		x=5
+		y=200
+		width=440
+		height=90
+	}
+	"composite name"=""
+	children {
+		rectangle {
+			object {
+				x=110
+				y=207
+				width=230
+				height=21
+			}
+			"basic attribute" {
+				clr=2
+			}
+		}
+		rectangle {
+			object {
+				x=5
+				y=200
+				width=440
+				height=90
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=1
+			}
+		}
+		text {
+			object {
+				x=145
+				y=207
+				width=160
+				height=20
+			}
+			"basic attribute" {
+				clr=54
+			}
+			textix="Temperatures (C)"
+			align="horiz. centered"
+		}
+		composite {
+			object {
+				x=40
+				y=235
+				width=371
+				height=45
+			}
+			"composite name"=""
+			children {
+				composite {
+					object {
+						x=196
+						y=235
+						width=215
+						height=45
+					}
+					"composite name"=""
+					children {
+						"text update" {
+							object {
+								x=311
+								y=235
+								width=100
+								height=20
+							}
+							monitor {
+								chan="$(P)$(R)MirrorTemperature"
+								clr=54
+								bclr=3
+							}
+							limits {
+							}
+						}
+						text {
+							object {
+								x=246
+								y=235
+								width=60
+								height=20
+							}
+							"basic attribute" {
+								clr=14
+							}
+							textix="Mirror"
+							align="horiz. right"
+						}
+						"text update" {
+							object {
+								x=311
+								y=260
+								width=100
+								height=20
+							}
+							monitor {
+								chan="$(P)$(R)ElectronicsTemperature"
+								clr=54
+								bclr=3
+							}
+							limits {
+							}
+						}
+						text {
+							object {
+								x=196
+								y=260
+								width=110
+								height=20
+							}
+							"basic attribute" {
+								clr=14
+							}
+							textix="Electronics"
+							align="horiz. right"
+						}
+					}
+				}
+				composite {
+					object {
+						x=40
+						y=235
+						width=135
+						height=45
+					}
+					"composite name"=""
+					children {
+						"text update" {
+							object {
+								x=75
+								y=235
+								width=100
+								height=20
+							}
+							monitor {
+								chan="$(P)$(R)IC1Temperature"
+								clr=54
+								bclr=3
+							}
+							limits {
+							}
+						}
+						"text update" {
+							object {
+								x=75
+								y=260
+								width=100
+								height=20
+							}
+							monitor {
+								chan="$(P)$(R)IC2Temperature"
+								clr=54
+								bclr=3
+							}
+							limits {
+							}
+						}
+						text {
+							object {
+								x=40
+								y=235
+								width=30
+								height=20
+							}
+							"basic attribute" {
+								clr=14
+							}
+							textix="IC1"
+							align="horiz. right"
+						}
+						text {
+							object {
+								x=40
+								y=260
+								width=30
+								height=20
+							}
+							"basic attribute" {
+								clr=14
+							}
+							textix="IC2"
+							align="horiz. right"
+						}
+					}
+				}
+			}
+		}
+	}
+}
+rectangle {
+	object {
+		x=0
+		y=5
+		width=1275
+		height=25
+	}
+	"basic attribute" {
+		clr=54
+	}
+}
+text {
+	object {
+		x=0
+		y=5
+		width=1275
+		height=25
+	}
+	"basic attribute" {
+		clr=0
+	}
+	textix="ThorLabs Deformable Mirror ($(P)$(R))"
+	align="horiz. centered"
 }
 rectangle {
 	object {
@@ -185,52 +717,2006 @@ text {
 	textix="Tilt"
 	align="horiz. centered"
 }
-composite {
+rectangle {
 	object {
 		x=450
 		y=35
 		width=820
-		height=540
+		height=565
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+		width=1
+	}
+}
+"text entry" {
+	object {
+		x=565
+		y=370
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment13SetVolts"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=370
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Segment 13"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=775
+		y=370
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)Segment13GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=650
+		y=370
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment13SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=565
+		y=395
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment14SetVolts"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=395
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Segment 14"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=775
+		y=395
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)Segment14GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=650
+		y=395
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment14SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=565
+		y=420
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment15SetVolts"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=420
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Segment 15"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=775
+		y=420
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)Segment15GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=650
+		y=420
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment15SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=565
+		y=445
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment16SetVolts"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=445
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Segment 16"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=775
+		y=445
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)Segment16GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=650
+		y=445
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment16SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=565
+		y=470
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment17SetVolts"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=470
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Segment 17"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=775
+		y=470
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)Segment17GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=650
+		y=470
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment17SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=565
+		y=495
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment18SetVolts"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=495
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Segment 18"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=775
+		y=495
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)Segment18GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=650
+		y=495
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment18SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=565
+		y=520
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment19SetVolts"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=520
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Segment 19"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=775
+		y=520
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)Segment19GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=650
+		y=520
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment19SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=565
+		y=545
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment20SetVolts"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=460
+		y=545
+		width=100
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Segment 20"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=775
+		y=545
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)Segment20GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=650
+		y=545
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)Segment20SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+composite {
+	object {
+		x=870
+		y=70
+		width=395
+		height=495
 	}
 	"composite name"=""
 	children {
-		rectangle {
+		"text entry" {
 			object {
-				x=750
-				y=40
-				width=200
-				height=21
+				x=975
+				y=70
+				width=80
+				height=20
 			}
-			"basic attribute" {
-				clr=2
-			}
-		}
-		rectangle {
-			object {
-				x=450
-				y=35
-				width=820
-				height=540
-			}
-			"basic attribute" {
+			control {
+				chan="$(P)$(R)Segment21SetVolts"
 				clr=14
-				fill="outline"
-				width=1
+				bclr=51
+			}
+			limits {
 			}
 		}
 		text {
 			object {
-				x=770
-				y=40
-				width=160
+				x=870
+				y=70
+				width=100
 				height=20
 			}
 			"basic attribute" {
-				clr=54
+				clr=14
 			}
-			textix="Segment Voltages"
-			align="horiz. centered"
+			textix="Segment 21"
+			align="horiz. right"
 		}
+		"text update" {
+			object {
+				x=1185
+				y=70
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment21GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=70
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment21SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=95
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment22SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=95
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 22"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=95
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment22GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=95
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment22SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=120
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment23SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=120
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 23"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=120
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment23GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=120
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment23SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=145
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment24SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=145
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 24"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=145
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment24GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=145
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment24SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=170
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment25SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=170
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 25"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=170
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment25GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=170
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment25SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=195
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment26SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=195
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 26"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=195
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment26GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=195
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment26SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=220
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment27SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=220
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 27"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=220
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment27GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=220
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment27SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=245
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment28SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=245
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 28"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=245
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment28GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=245
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment28SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=270
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment29SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=270
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 29"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=270
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment29GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=270
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment29SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=295
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment30SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=295
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 30"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=295
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment30GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=295
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment30SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=320
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment31SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=320
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 31"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=320
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment31GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=320
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment31SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=345
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment32SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=345
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 32"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=345
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment32GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=345
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment32SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=370
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment33SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=370
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 33"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=370
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment33GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=370
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment33SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=395
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment34SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=395
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 34"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=395
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment34GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=395
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment34SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=420
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment35SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=420
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 35"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=420
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment35GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=420
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment35SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=445
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment36SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=445
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 36"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=445
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment36GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=445
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment36SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=470
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment37SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=470
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 37"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=470
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment37GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=470
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment37SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=495
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment38SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=495
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 38"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=495
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment38GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=495
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment38SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=520
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment39SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=520
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 39"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=520
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment39GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=520
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment39SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=975
+				y=545
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment40SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		text {
+			object {
+				x=870
+				y=545
+				width=100
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Segment 40"
+			align="horiz. right"
+		}
+		"text update" {
+			object {
+				x=1185
+				y=545
+				width=80
+				height=20
+			}
+			monitor {
+				chan="$(P)$(R)Segment40GetVolts"
+				clr=54
+				bclr=3
+			}
+			limits {
+			}
+		}
+		valuator {
+			object {
+				x=1060
+				y=545
+				width=120
+				height=20
+			}
+			control {
+				chan="$(P)$(R)Segment40SetVolts"
+				clr=14
+				bclr=51
+			}
+			dPrecision=1.000000
+			limits {
+			}
+		}
+	}
+}
+valuator {
+	object {
+		x=235
+		y=70
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)SetTiltAmplitude"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+valuator {
+	object {
+		x=235
+		y=95
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)SetTiltAngle"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+valuator {
+	object {
+		x=235
+		y=120
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)TiltArm1SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+valuator {
+	object {
+		x=235
+		y=145
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)TiltArm2SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+valuator {
+	object {
+		x=235
+		y=170
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)TiltArm3SetVolts"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+composite {
+	object {
+		x=15
+		y=70
+		width=130
+		height=120
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=35
+				y=120
+				width=110
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Arm 1 volts"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=15
+				y=70
+				width=130
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Amplitude (%)"
+		}
+		text {
+			object {
+				x=35
+				y=95
+				width=110
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Angle (deg)"
+		}
+		text {
+			object {
+				x=35
+				y=145
+				width=110
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Arm 2 volts"
+			align="horiz. right"
+		}
+		text {
+			object {
+				x=35
+				y=170
+				width=110
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Arm 3 volts"
+			align="horiz. right"
+		}
+	}
+}
+composite {
+	object {
+		x=150
+		y=70
+		width=80
+		height=120
+	}
+	"composite name"=""
+	children {
+		"text entry" {
+			object {
+				x=150
+				y=120
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)TiltArm1SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=150
+				y=70
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)SetTiltAmplitude"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=150
+				y=95
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)SetTiltAngle"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=150
+				y=145
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)TiltArm2SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+		"text entry" {
+			object {
+				x=150
+				y=170
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)TiltArm3SetVolts"
+				clr=14
+				bclr=51
+			}
+			limits {
+			}
+		}
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=120
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)TiltArm1GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=145
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)TiltArm2GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=169
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)TiltArm3GetVolts"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=70
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)SetTiltAmplitude_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=360
+		y=95
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)SetTiltAngle_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+composite {
+	object {
+		x=460
+		y=70
+		width=395
+		height=295
+	}
+	"composite name"=""
+	children {
 		"text entry" {
 			object {
 				x=565
@@ -939,1984 +3425,41 @@ composite {
 			limits {
 			}
 		}
-		"text entry" {
-			object {
-				x=565
-				y=370
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment13SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		text {
-			object {
-				x=460
-				y=370
-				width=100
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Segment 13"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=775
-				y=370
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)$(R)Segment13GetVolts"
-				clr=54
-				bclr=3
-			}
-			limits {
-			}
-		}
-		valuator {
-			object {
-				x=650
-				y=370
-				width=120
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment13SetVolts"
-				clr=14
-				bclr=51
-			}
-			dPrecision=1.000000
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=565
-				y=395
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment14SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		text {
-			object {
-				x=460
-				y=395
-				width=100
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Segment 14"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=775
-				y=395
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)$(R)Segment14GetVolts"
-				clr=54
-				bclr=3
-			}
-			limits {
-			}
-		}
-		valuator {
-			object {
-				x=650
-				y=395
-				width=120
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment14SetVolts"
-				clr=14
-				bclr=51
-			}
-			dPrecision=1.000000
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=565
-				y=420
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment15SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		text {
-			object {
-				x=460
-				y=420
-				width=100
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Segment 15"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=775
-				y=420
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)$(R)Segment15GetVolts"
-				clr=54
-				bclr=3
-			}
-			limits {
-			}
-		}
-		valuator {
-			object {
-				x=650
-				y=420
-				width=120
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment15SetVolts"
-				clr=14
-				bclr=51
-			}
-			dPrecision=1.000000
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=565
-				y=445
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment16SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		text {
-			object {
-				x=460
-				y=445
-				width=100
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Segment 16"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=775
-				y=445
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)$(R)Segment16GetVolts"
-				clr=54
-				bclr=3
-			}
-			limits {
-			}
-		}
-		valuator {
-			object {
-				x=650
-				y=445
-				width=120
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment16SetVolts"
-				clr=14
-				bclr=51
-			}
-			dPrecision=1.000000
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=565
-				y=470
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment17SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		text {
-			object {
-				x=460
-				y=470
-				width=100
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Segment 17"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=775
-				y=470
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)$(R)Segment17GetVolts"
-				clr=54
-				bclr=3
-			}
-			limits {
-			}
-		}
-		valuator {
-			object {
-				x=650
-				y=470
-				width=120
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment17SetVolts"
-				clr=14
-				bclr=51
-			}
-			dPrecision=1.000000
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=565
-				y=495
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment18SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		text {
-			object {
-				x=460
-				y=495
-				width=100
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Segment 18"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=775
-				y=495
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)$(R)Segment18GetVolts"
-				clr=54
-				bclr=3
-			}
-			limits {
-			}
-		}
-		valuator {
-			object {
-				x=650
-				y=495
-				width=120
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment18SetVolts"
-				clr=14
-				bclr=51
-			}
-			dPrecision=1.000000
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=565
-				y=520
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment19SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		text {
-			object {
-				x=460
-				y=520
-				width=100
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Segment 19"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=775
-				y=520
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)$(R)Segment19GetVolts"
-				clr=54
-				bclr=3
-			}
-			limits {
-			}
-		}
-		valuator {
-			object {
-				x=650
-				y=520
-				width=120
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment19SetVolts"
-				clr=14
-				bclr=51
-			}
-			dPrecision=1.000000
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=565
-				y=545
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment20SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		text {
-			object {
-				x=460
-				y=545
-				width=100
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Segment 20"
-			align="horiz. right"
-		}
-		"text update" {
-			object {
-				x=775
-				y=545
-				width=80
-				height=20
-			}
-			monitor {
-				chan="$(P)$(R)Segment20GetVolts"
-				clr=54
-				bclr=3
-			}
-			limits {
-			}
-		}
-		valuator {
-			object {
-				x=650
-				y=545
-				width=120
-				height=20
-			}
-			control {
-				chan="$(P)$(R)Segment20SetVolts"
-				clr=14
-				bclr=51
-			}
-			dPrecision=1.000000
-			limits {
-			}
-		}
-		composite {
-			object {
-				x=870
-				y=70
-				width=395
-				height=495
-			}
-			"composite name"=""
-			children {
-				"text entry" {
-					object {
-						x=975
-						y=70
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment21SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=70
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 21"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=70
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment21GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=70
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment21SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=95
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment22SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=95
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 22"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=95
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment22GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=95
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment22SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=120
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment23SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=120
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 23"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=120
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment23GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=120
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment23SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=145
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment24SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=145
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 24"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=145
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment24GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=145
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment24SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=170
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment25SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=170
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 25"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=170
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment25GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=170
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment25SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=195
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment26SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=195
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 26"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=195
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment26GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=195
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment26SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=220
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment27SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=220
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 27"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=220
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment27GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=220
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment27SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=245
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment28SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=245
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 28"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=245
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment28GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=245
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment28SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=270
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment29SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=270
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 29"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=270
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment29GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=270
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment29SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=295
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment30SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=295
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 30"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=295
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment30GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=295
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment30SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=320
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment31SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=320
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 31"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=320
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment31GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=320
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment31SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=345
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment32SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=345
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 32"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=345
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment32GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=345
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment32SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=370
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment33SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=370
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 33"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=370
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment33GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=370
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment33SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=395
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment34SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=395
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 34"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=395
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment34GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=395
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment34SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=420
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment35SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=420
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 35"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=420
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment35GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=420
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment35SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=445
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment36SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=445
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 36"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=445
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment36GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=445
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment36SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=470
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment37SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=470
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 37"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=470
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment37GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=470
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment37SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=495
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment38SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=495
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 38"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=495
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment38GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=495
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment38SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=520
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment39SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=520
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 39"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=520
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment39GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=520
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment39SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-				"text entry" {
-					object {
-						x=975
-						y=545
-						width=80
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment40SetVolts"
-						clr=14
-						bclr=51
-					}
-					limits {
-					}
-				}
-				text {
-					object {
-						x=870
-						y=545
-						width=100
-						height=20
-					}
-					"basic attribute" {
-						clr=14
-					}
-					textix="Segment 40"
-					align="horiz. right"
-				}
-				"text update" {
-					object {
-						x=1185
-						y=545
-						width=80
-						height=20
-					}
-					monitor {
-						chan="$(P)$(R)Segment40GetVolts"
-						clr=54
-						bclr=3
-					}
-					limits {
-					}
-				}
-				valuator {
-					object {
-						x=1060
-						y=545
-						width=120
-						height=20
-					}
-					control {
-						chan="$(P)$(R)Segment40SetVolts"
-						clr=14
-						bclr=51
-					}
-					dPrecision=1.000000
-					limits {
-					}
-				}
-			}
-		}
-	}
-}
-valuator {
-	object {
-		x=235
-		y=70
-		width=120
-		height=20
-	}
-	control {
-		chan="$(P)$(R)SetTiltAmplitude"
-		clr=14
-		bclr=51
-	}
-	dPrecision=1.000000
-	limits {
-	}
-}
-valuator {
-	object {
-		x=235
-		y=95
-		width=120
-		height=20
-	}
-	control {
-		chan="$(P)$(R)SetTiltAngle"
-		clr=14
-		bclr=51
-	}
-	dPrecision=1.000000
-	limits {
-	}
-}
-valuator {
-	object {
-		x=235
-		y=120
-		width=120
-		height=20
-	}
-	control {
-		chan="$(P)$(R)TiltArm1SetVolts"
-		clr=14
-		bclr=51
-	}
-	dPrecision=1.000000
-	limits {
-	}
-}
-valuator {
-	object {
-		x=235
-		y=145
-		width=120
-		height=20
-	}
-	control {
-		chan="$(P)$(R)TiltArm2SetVolts"
-		clr=14
-		bclr=51
-	}
-	dPrecision=1.000000
-	limits {
-	}
-}
-valuator {
-	object {
-		x=235
-		y=170
-		width=120
-		height=20
-	}
-	control {
-		chan="$(P)$(R)TiltArm3SetVolts"
-		clr=14
-		bclr=51
-	}
-	dPrecision=1.000000
-	limits {
 	}
 }
 composite {
 	object {
-		x=15
-		y=70
-		width=130
-		height=120
+		x=750
+		y=40
+		width=200
+		height=21
 	}
 	"composite name"=""
 	children {
-		text {
+		rectangle {
 			object {
-				x=35
-				y=120
-				width=110
-				height=20
+				x=750
+				y=40
+				width=200
+				height=21
 			}
 			"basic attribute" {
-				clr=14
+				clr=2
 			}
-			textix="Arm 1 volts"
-			align="horiz. right"
-		}
-		text {
-			object {
-				x=15
-				y=70
-				width=130
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Amplitude (%)"
 		}
 		text {
 			object {
-				x=35
-				y=95
-				width=110
+				x=770
+				y=40
+				width=160
 				height=20
 			}
 			"basic attribute" {
-				clr=14
+				clr=54
 			}
-			textix="Angle (deg)"
+			textix="Segment Voltages"
+			align="horiz. centered"
 		}
-		text {
-			object {
-				x=35
-				y=145
-				width=110
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Arm 2 volts"
-			align="horiz. right"
-		}
-		text {
-			object {
-				x=35
-				y=170
-				width=110
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Arm 3 volts"
-			align="horiz. right"
-		}
-	}
-}
-composite {
-	object {
-		x=150
-		y=70
-		width=80
-		height=120
-	}
-	"composite name"=""
-	children {
-		"text entry" {
-			object {
-				x=150
-				y=120
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)TiltArm1SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=150
-				y=70
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)SetTiltAmplitude"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=150
-				y=95
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)SetTiltAngle"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=150
-				y=145
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)TiltArm2SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-		"text entry" {
-			object {
-				x=150
-				y=170
-				width=80
-				height=20
-			}
-			control {
-				chan="$(P)$(R)TiltArm3SetVolts"
-				clr=14
-				bclr=51
-			}
-			limits {
-			}
-		}
-	}
-}
-"text update" {
-	object {
-		x=360
-		y=120
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(R)TiltArm1GetVolts"
-		clr=54
-		bclr=3
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=360
-		y=145
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(R)TiltArm2GetVolts"
-		clr=54
-		bclr=3
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=360
-		y=169
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(R)TiltArm3GetVolts"
-		clr=54
-		bclr=3
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=360
-		y=70
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(R)SetTiltAmplitude_RBV"
-		clr=54
-		bclr=3
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=360
-		y=95
-		width=80
-		height=20
-	}
-	monitor {
-		chan="$(P)$(R)SetTiltAngle_RBV"
-		clr=54
-		bclr=3
-	}
-	limits {
 	}
 }
 composite {
@@ -3109,6 +3652,890 @@ composite {
 					}
 				}
 			}
+		}
+	}
+}
+composite {
+	object {
+		x=730
+		y=611
+		width=260
+		height=35
+	}
+	"composite name"=""
+	children {
+		composite {
+			object {
+				x=743
+				y=618
+				width=235
+				height=20
+			}
+			"composite name"=""
+			children {
+				menu {
+					object {
+						x=858
+						y=618
+						width=120
+						height=20
+					}
+					control {
+						chan="$(P)$(R)ReadStatus.SCAN"
+						clr=14
+						bclr=51
+					}
+				}
+				text {
+					object {
+						x=743
+						y=618
+						width=110
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="Status rate"
+					align="horiz. right"
+				}
+			}
+		}
+		rectangle {
+			object {
+				x=730
+				y=611
+				width=260
+				height=35
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=1
+			}
+		}
+	}
+}
+rectangle {
+	object {
+		x=127
+		y=300
+		width=200
+		height=21
+	}
+	"basic attribute" {
+		clr=2
+	}
+}
+text {
+	object {
+		x=147
+		y=300
+		width=160
+		height=20
+	}
+	"basic attribute" {
+		clr=54
+	}
+	textix="Zernike Values"
+	align="horiz. centered"
+}
+rectangle {
+	object {
+		x=5
+		y=295
+		width=440
+		height=360
+	}
+	"basic attribute" {
+		clr=14
+		fill="outline"
+		width=1
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=330
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeAst45Value"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=58
+		y=330
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Ast45"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=330
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeAst45Value_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=330
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeAst45Value"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=355
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeDefValue"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=78
+		y=355
+		width=30
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Def"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=355
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeDefValue_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=355
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeDefValue"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=380
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeAst0Value"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=68
+		y=380
+		width=40
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="Ast0"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=380
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeAst0Value_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=380
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeAst0Value"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=405
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeTreYValue"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=68
+		y=405
+		width=40
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="TreY"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=405
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeTreYValue_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=405
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeTreYValue"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=430
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeComXValue"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=68
+		y=430
+		width=40
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="ComX"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=430
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeComXValue_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=430
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeComXValue"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=455
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeComYValue"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=68
+		y=455
+		width=40
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="ComY"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=455
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeComYValue_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=455
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeComYValue"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=480
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeTreXValue"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=68
+		y=480
+		width=40
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="TreX"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=480
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeTreXValue_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=480
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeTreXValue"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=505
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeTetYValue"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=68
+		y=505
+		width=40
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="TetY"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=505
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeTetYValue_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=505
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeTetYValue"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=530
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeSAstYValue"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=48
+		y=530
+		width=60
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="SSAstY"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=530
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeSAstYValue_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=530
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeSAstYValue"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=555
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeSAb3Value"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=68
+		y=555
+		width=40
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="SAb3"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=555
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeSAb3Value_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=555
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeSAb3Value"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=580
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeSAstXValue"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=58
+		y=580
+		width=50
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="SAstX"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=580
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeSAstXValue_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=580
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeSAstXValue"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+"text entry" {
+	object {
+		x=113
+		y=605
+		width=80
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeTetXValue"
+		clr=14
+		bclr=51
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=68
+		y=605
+		width=40
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="TetX"
+	align="horiz. right"
+}
+"text update" {
+	object {
+		x=323
+		y=605
+		width=80
+		height=20
+	}
+	monitor {
+		chan="$(P)$(R)ZernikeTetXValue_RBV"
+		clr=54
+		bclr=3
+	}
+	limits {
+	}
+}
+valuator {
+	object {
+		x=198
+		y=605
+		width=120
+		height=20
+	}
+	control {
+		chan="$(P)$(R)ZernikeTetXValue"
+		clr=14
+		bclr=51
+	}
+	dPrecision=1.000000
+	limits {
+	}
+}
+composite {
+	object {
+		x=83
+		y=630
+		width=285
+		height=20
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=83
+				y=630
+				width=200
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Reset Zernike Values"
+			align="horiz. right"
+		}
+		"message button" {
+			object {
+				x=288
+				y=630
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)ResetZernikeValues"
+				clr=14
+				bclr=51
+			}
+			label="Reset"
+			press_msg="1"
+		}
+	}
+}
+composite {
+	object {
+		x=708
+		y=575
+		width=305
+		height=20
+	}
+	"composite name"=""
+	children {
+		text {
+			object {
+				x=708
+				y=575
+				width=220
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="Reset Segment Voltages"
+			align="horiz. right"
+		}
+		"message button" {
+			object {
+				x=933
+				y=575
+				width=80
+				height=20
+			}
+			control {
+				chan="$(P)$(R)ResetSegmentVolts"
+				clr=14
+				bclr=51
+			}
+			label="Reset"
+			press_msg="1"
 		}
 	}
 }

@@ -1,0 +1,4508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-07-25 17:51:35 by epics-->
+<display version="2.0.0">
+  <name>ThorLabsDFM</name>
+  <x>560</x>
+  <y>283</y>
+  <width>1275</width>
+  <height>660</height>
+  <background_color>
+    <color red="187" green="187" blue="187">
+    </color>
+  </background_color>
+  <grid_visible>false</grid_visible>
+  <grid_step_x>5</grid_step_x>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #6</name>
+    <y>5</y>
+    <width>1275</width>
+    <height>25</height>
+    <line_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #9</name>
+    <text>ThorLabs Deformable Mirror ($(P)$(R))</text>
+    <y>5</y>
+    <width>1275</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #12</name>
+    <x>150</x>
+    <y>40</y>
+    <width>150</width>
+    <height>21</height>
+    <line_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #15</name>
+    <x>5</x>
+    <y>35</y>
+    <width>440</width>
+    <height>160</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #18</name>
+    <text>Tilt</text>
+    <x>160</x>
+    <y>40</y>
+    <width>130</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #21</name>
+    <pv_name>$(P)$(R)SetTiltAmplitude</pv_name>
+    <x>235</x>
+    <y>70</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #25</name>
+    <pv_name>$(P)$(R)SetTiltAngle</pv_name>
+    <x>235</x>
+    <y>95</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #29</name>
+    <pv_name>$(P)$(R)TiltArm1SetVolts</pv_name>
+    <x>235</x>
+    <y>120</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #33</name>
+    <pv_name>$(P)$(R)TiltArm2SetVolts</pv_name>
+    <x>235</x>
+    <y>145</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #37</name>
+    <pv_name>$(P)$(R)TiltArm3SetVolts</pv_name>
+    <x>235</x>
+    <y>170</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #41</name>
+    <x>15</x>
+    <y>70</y>
+    <width>130</width>
+    <height>120</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #44</name>
+      <text>Arm 1 volts</text>
+      <x>20</x>
+      <y>50</y>
+      <width>110</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #47</name>
+      <text>Amplitude (%)</text>
+      <width>130</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #50</name>
+      <text>Angle (deg)</text>
+      <x>20</x>
+      <y>25</y>
+      <width>110</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #53</name>
+      <text>Arm 2 volts</text>
+      <x>20</x>
+      <y>75</y>
+      <width>110</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #56</name>
+      <text>Arm 3 volts</text>
+      <x>20</x>
+      <y>100</y>
+      <width>110</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #59</name>
+    <x>150</x>
+    <y>70</y>
+    <width>80</width>
+    <height>120</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #62</name>
+      <pv_name>$(P)$(R)TiltArm1SetVolts</pv_name>
+      <y>50</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #66</name>
+      <pv_name>$(P)$(R)SetTiltAmplitude</pv_name>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #70</name>
+      <pv_name>$(P)$(R)SetTiltAngle</pv_name>
+      <y>25</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #74</name>
+      <pv_name>$(P)$(R)TiltArm2SetVolts</pv_name>
+      <y>75</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #78</name>
+      <pv_name>$(P)$(R)TiltArm3SetVolts</pv_name>
+      <y>100</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #82</name>
+    <pv_name>$(P)$(R)TiltArm1GetVolts</pv_name>
+    <x>360</x>
+    <y>120</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #86</name>
+    <pv_name>$(P)$(R)TiltArm2GetVolts</pv_name>
+    <x>360</x>
+    <y>145</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #90</name>
+    <pv_name>$(P)$(R)TiltArm3GetVolts</pv_name>
+    <x>360</x>
+    <y>169</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #94</name>
+    <pv_name>$(P)$(R)SetTiltAmplitude_RBV</pv_name>
+    <x>360</x>
+    <y>70</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #98</name>
+    <pv_name>$(P)$(R)SetTiltAngle_RBV</pv_name>
+    <x>360</x>
+    <y>95</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #102</name>
+    <x>5</x>
+    <y>200</y>
+    <width>440</width>
+    <height>90</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectangle #105</name>
+      <x>105</x>
+      <y>7</y>
+      <width>230</width>
+      <height>21</height>
+      <line_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </line_color>
+      <background_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectangle #108</name>
+      <width>440</width>
+      <height>90</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #111</name>
+      <text>Temperatures (C)</text>
+      <x>140</x>
+      <y>7</y>
+      <width>160</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>composite #114</name>
+      <x>35</x>
+      <y>35</y>
+      <width>371</width>
+      <height>45</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="group" version="2.0.0">
+        <name>composite #117</name>
+        <x>156</x>
+        <width>215</width>
+        <height>45</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="textupdate" version="2.0.0">
+          <name>text update #120</name>
+          <pv_name>$(P)$(R)MirrorTemperature</pv_name>
+          <x>115</x>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color red="200" green="200" blue="200">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>text #124</name>
+          <text>Mirror</text>
+          <x>50</x>
+          <width>60</width>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>text update #127</name>
+          <pv_name>$(P)$(R)ElectronicsTemperature</pv_name>
+          <x>115</x>
+          <y>25</y>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color red="200" green="200" blue="200">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>text #131</name>
+          <text>Electronics</text>
+          <y>25</y>
+          <width>110</width>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>composite #134</name>
+        <width>135</width>
+        <height>45</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="textupdate" version="2.0.0">
+          <name>text update #137</name>
+          <pv_name>$(P)$(R)IC1Temperature</pv_name>
+          <x>35</x>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color red="200" green="200" blue="200">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>text update #141</name>
+          <pv_name>$(P)$(R)IC2Temperature</pv_name>
+          <x>35</x>
+          <y>25</y>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color red="200" green="200" blue="200">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>text #145</name>
+          <text>IC1</text>
+          <width>30</width>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>text #148</name>
+          <text>IC2</text>
+          <y>25</y>
+          <width>30</width>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #151</name>
+    <y>5</y>
+    <width>1275</width>
+    <height>25</height>
+    <line_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #154</name>
+    <text>ThorLabs Deformable Mirror ($(P)$(R))</text>
+    <y>5</y>
+    <width>1275</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #157</name>
+    <x>150</x>
+    <y>40</y>
+    <width>150</width>
+    <height>21</height>
+    <line_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #160</name>
+    <x>5</x>
+    <y>35</y>
+    <width>440</width>
+    <height>160</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #163</name>
+    <text>Tilt</text>
+    <x>160</x>
+    <y>40</y>
+    <width>130</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #166</name>
+    <x>450</x>
+    <y>35</y>
+    <width>820</width>
+    <height>565</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #169</name>
+    <pv_name>$(P)$(R)Segment13SetVolts</pv_name>
+    <x>565</x>
+    <y>370</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #173</name>
+    <text>Segment 13</text>
+    <x>460</x>
+    <y>370</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #176</name>
+    <pv_name>$(P)$(R)Segment13GetVolts</pv_name>
+    <x>775</x>
+    <y>370</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #180</name>
+    <pv_name>$(P)$(R)Segment13SetVolts</pv_name>
+    <x>650</x>
+    <y>370</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #184</name>
+    <pv_name>$(P)$(R)Segment14SetVolts</pv_name>
+    <x>565</x>
+    <y>395</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #188</name>
+    <text>Segment 14</text>
+    <x>460</x>
+    <y>395</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #191</name>
+    <pv_name>$(P)$(R)Segment14GetVolts</pv_name>
+    <x>775</x>
+    <y>395</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #195</name>
+    <pv_name>$(P)$(R)Segment14SetVolts</pv_name>
+    <x>650</x>
+    <y>395</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #199</name>
+    <pv_name>$(P)$(R)Segment15SetVolts</pv_name>
+    <x>565</x>
+    <y>420</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #203</name>
+    <text>Segment 15</text>
+    <x>460</x>
+    <y>420</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #206</name>
+    <pv_name>$(P)$(R)Segment15GetVolts</pv_name>
+    <x>775</x>
+    <y>420</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #210</name>
+    <pv_name>$(P)$(R)Segment15SetVolts</pv_name>
+    <x>650</x>
+    <y>420</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #214</name>
+    <pv_name>$(P)$(R)Segment16SetVolts</pv_name>
+    <x>565</x>
+    <y>445</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #218</name>
+    <text>Segment 16</text>
+    <x>460</x>
+    <y>445</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #221</name>
+    <pv_name>$(P)$(R)Segment16GetVolts</pv_name>
+    <x>775</x>
+    <y>445</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #225</name>
+    <pv_name>$(P)$(R)Segment16SetVolts</pv_name>
+    <x>650</x>
+    <y>445</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #229</name>
+    <pv_name>$(P)$(R)Segment17SetVolts</pv_name>
+    <x>565</x>
+    <y>470</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #233</name>
+    <text>Segment 17</text>
+    <x>460</x>
+    <y>470</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #236</name>
+    <pv_name>$(P)$(R)Segment17GetVolts</pv_name>
+    <x>775</x>
+    <y>470</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #240</name>
+    <pv_name>$(P)$(R)Segment17SetVolts</pv_name>
+    <x>650</x>
+    <y>470</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #244</name>
+    <pv_name>$(P)$(R)Segment18SetVolts</pv_name>
+    <x>565</x>
+    <y>495</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #248</name>
+    <text>Segment 18</text>
+    <x>460</x>
+    <y>495</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #251</name>
+    <pv_name>$(P)$(R)Segment18GetVolts</pv_name>
+    <x>775</x>
+    <y>495</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #255</name>
+    <pv_name>$(P)$(R)Segment18SetVolts</pv_name>
+    <x>650</x>
+    <y>495</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #259</name>
+    <pv_name>$(P)$(R)Segment19SetVolts</pv_name>
+    <x>565</x>
+    <y>520</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #263</name>
+    <text>Segment 19</text>
+    <x>460</x>
+    <y>520</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #266</name>
+    <pv_name>$(P)$(R)Segment19GetVolts</pv_name>
+    <x>775</x>
+    <y>520</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #270</name>
+    <pv_name>$(P)$(R)Segment19SetVolts</pv_name>
+    <x>650</x>
+    <y>520</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #274</name>
+    <pv_name>$(P)$(R)Segment20SetVolts</pv_name>
+    <x>565</x>
+    <y>545</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #278</name>
+    <text>Segment 20</text>
+    <x>460</x>
+    <y>545</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #281</name>
+    <pv_name>$(P)$(R)Segment20GetVolts</pv_name>
+    <x>775</x>
+    <y>545</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #285</name>
+    <pv_name>$(P)$(R)Segment20SetVolts</pv_name>
+    <x>650</x>
+    <y>545</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #289</name>
+    <x>870</x>
+    <y>70</y>
+    <width>395</width>
+    <height>495</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #292</name>
+      <pv_name>$(P)$(R)Segment21SetVolts</pv_name>
+      <x>105</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #296</name>
+      <text>Segment 21</text>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #299</name>
+      <pv_name>$(P)$(R)Segment21GetVolts</pv_name>
+      <x>315</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #303</name>
+      <pv_name>$(P)$(R)Segment21SetVolts</pv_name>
+      <x>190</x>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #307</name>
+      <pv_name>$(P)$(R)Segment22SetVolts</pv_name>
+      <x>105</x>
+      <y>25</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #311</name>
+      <text>Segment 22</text>
+      <y>25</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #314</name>
+      <pv_name>$(P)$(R)Segment22GetVolts</pv_name>
+      <x>315</x>
+      <y>25</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #318</name>
+      <pv_name>$(P)$(R)Segment22SetVolts</pv_name>
+      <x>190</x>
+      <y>25</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #322</name>
+      <pv_name>$(P)$(R)Segment23SetVolts</pv_name>
+      <x>105</x>
+      <y>50</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #326</name>
+      <text>Segment 23</text>
+      <y>50</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #329</name>
+      <pv_name>$(P)$(R)Segment23GetVolts</pv_name>
+      <x>315</x>
+      <y>50</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #333</name>
+      <pv_name>$(P)$(R)Segment23SetVolts</pv_name>
+      <x>190</x>
+      <y>50</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #337</name>
+      <pv_name>$(P)$(R)Segment24SetVolts</pv_name>
+      <x>105</x>
+      <y>75</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #341</name>
+      <text>Segment 24</text>
+      <y>75</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #344</name>
+      <pv_name>$(P)$(R)Segment24GetVolts</pv_name>
+      <x>315</x>
+      <y>75</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #348</name>
+      <pv_name>$(P)$(R)Segment24SetVolts</pv_name>
+      <x>190</x>
+      <y>75</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #352</name>
+      <pv_name>$(P)$(R)Segment25SetVolts</pv_name>
+      <x>105</x>
+      <y>100</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #356</name>
+      <text>Segment 25</text>
+      <y>100</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #359</name>
+      <pv_name>$(P)$(R)Segment25GetVolts</pv_name>
+      <x>315</x>
+      <y>100</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #363</name>
+      <pv_name>$(P)$(R)Segment25SetVolts</pv_name>
+      <x>190</x>
+      <y>100</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #367</name>
+      <pv_name>$(P)$(R)Segment26SetVolts</pv_name>
+      <x>105</x>
+      <y>125</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #371</name>
+      <text>Segment 26</text>
+      <y>125</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #374</name>
+      <pv_name>$(P)$(R)Segment26GetVolts</pv_name>
+      <x>315</x>
+      <y>125</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #378</name>
+      <pv_name>$(P)$(R)Segment26SetVolts</pv_name>
+      <x>190</x>
+      <y>125</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #382</name>
+      <pv_name>$(P)$(R)Segment27SetVolts</pv_name>
+      <x>105</x>
+      <y>150</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #386</name>
+      <text>Segment 27</text>
+      <y>150</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #389</name>
+      <pv_name>$(P)$(R)Segment27GetVolts</pv_name>
+      <x>315</x>
+      <y>150</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #393</name>
+      <pv_name>$(P)$(R)Segment27SetVolts</pv_name>
+      <x>190</x>
+      <y>150</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #397</name>
+      <pv_name>$(P)$(R)Segment28SetVolts</pv_name>
+      <x>105</x>
+      <y>175</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #401</name>
+      <text>Segment 28</text>
+      <y>175</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #404</name>
+      <pv_name>$(P)$(R)Segment28GetVolts</pv_name>
+      <x>315</x>
+      <y>175</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #408</name>
+      <pv_name>$(P)$(R)Segment28SetVolts</pv_name>
+      <x>190</x>
+      <y>175</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #412</name>
+      <pv_name>$(P)$(R)Segment29SetVolts</pv_name>
+      <x>105</x>
+      <y>200</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #416</name>
+      <text>Segment 29</text>
+      <y>200</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #419</name>
+      <pv_name>$(P)$(R)Segment29GetVolts</pv_name>
+      <x>315</x>
+      <y>200</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #423</name>
+      <pv_name>$(P)$(R)Segment29SetVolts</pv_name>
+      <x>190</x>
+      <y>200</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #427</name>
+      <pv_name>$(P)$(R)Segment30SetVolts</pv_name>
+      <x>105</x>
+      <y>225</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #431</name>
+      <text>Segment 30</text>
+      <y>225</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #434</name>
+      <pv_name>$(P)$(R)Segment30GetVolts</pv_name>
+      <x>315</x>
+      <y>225</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #438</name>
+      <pv_name>$(P)$(R)Segment30SetVolts</pv_name>
+      <x>190</x>
+      <y>225</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #442</name>
+      <pv_name>$(P)$(R)Segment31SetVolts</pv_name>
+      <x>105</x>
+      <y>250</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #446</name>
+      <text>Segment 31</text>
+      <y>250</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #449</name>
+      <pv_name>$(P)$(R)Segment31GetVolts</pv_name>
+      <x>315</x>
+      <y>250</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #453</name>
+      <pv_name>$(P)$(R)Segment31SetVolts</pv_name>
+      <x>190</x>
+      <y>250</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #457</name>
+      <pv_name>$(P)$(R)Segment32SetVolts</pv_name>
+      <x>105</x>
+      <y>275</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #461</name>
+      <text>Segment 32</text>
+      <y>275</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #464</name>
+      <pv_name>$(P)$(R)Segment32GetVolts</pv_name>
+      <x>315</x>
+      <y>275</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #468</name>
+      <pv_name>$(P)$(R)Segment32SetVolts</pv_name>
+      <x>190</x>
+      <y>275</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #472</name>
+      <pv_name>$(P)$(R)Segment33SetVolts</pv_name>
+      <x>105</x>
+      <y>300</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #476</name>
+      <text>Segment 33</text>
+      <y>300</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #479</name>
+      <pv_name>$(P)$(R)Segment33GetVolts</pv_name>
+      <x>315</x>
+      <y>300</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #483</name>
+      <pv_name>$(P)$(R)Segment33SetVolts</pv_name>
+      <x>190</x>
+      <y>300</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #487</name>
+      <pv_name>$(P)$(R)Segment34SetVolts</pv_name>
+      <x>105</x>
+      <y>325</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #491</name>
+      <text>Segment 34</text>
+      <y>325</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #494</name>
+      <pv_name>$(P)$(R)Segment34GetVolts</pv_name>
+      <x>315</x>
+      <y>325</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #498</name>
+      <pv_name>$(P)$(R)Segment34SetVolts</pv_name>
+      <x>190</x>
+      <y>325</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #502</name>
+      <pv_name>$(P)$(R)Segment35SetVolts</pv_name>
+      <x>105</x>
+      <y>350</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #506</name>
+      <text>Segment 35</text>
+      <y>350</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #509</name>
+      <pv_name>$(P)$(R)Segment35GetVolts</pv_name>
+      <x>315</x>
+      <y>350</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #513</name>
+      <pv_name>$(P)$(R)Segment35SetVolts</pv_name>
+      <x>190</x>
+      <y>350</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #517</name>
+      <pv_name>$(P)$(R)Segment36SetVolts</pv_name>
+      <x>105</x>
+      <y>375</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #521</name>
+      <text>Segment 36</text>
+      <y>375</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #524</name>
+      <pv_name>$(P)$(R)Segment36GetVolts</pv_name>
+      <x>315</x>
+      <y>375</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #528</name>
+      <pv_name>$(P)$(R)Segment36SetVolts</pv_name>
+      <x>190</x>
+      <y>375</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #532</name>
+      <pv_name>$(P)$(R)Segment37SetVolts</pv_name>
+      <x>105</x>
+      <y>400</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #536</name>
+      <text>Segment 37</text>
+      <y>400</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #539</name>
+      <pv_name>$(P)$(R)Segment37GetVolts</pv_name>
+      <x>315</x>
+      <y>400</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #543</name>
+      <pv_name>$(P)$(R)Segment37SetVolts</pv_name>
+      <x>190</x>
+      <y>400</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #547</name>
+      <pv_name>$(P)$(R)Segment38SetVolts</pv_name>
+      <x>105</x>
+      <y>425</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #551</name>
+      <text>Segment 38</text>
+      <y>425</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #554</name>
+      <pv_name>$(P)$(R)Segment38GetVolts</pv_name>
+      <x>315</x>
+      <y>425</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #558</name>
+      <pv_name>$(P)$(R)Segment38SetVolts</pv_name>
+      <x>190</x>
+      <y>425</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #562</name>
+      <pv_name>$(P)$(R)Segment39SetVolts</pv_name>
+      <x>105</x>
+      <y>450</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #566</name>
+      <text>Segment 39</text>
+      <y>450</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #569</name>
+      <pv_name>$(P)$(R)Segment39GetVolts</pv_name>
+      <x>315</x>
+      <y>450</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #573</name>
+      <pv_name>$(P)$(R)Segment39SetVolts</pv_name>
+      <x>190</x>
+      <y>450</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #577</name>
+      <pv_name>$(P)$(R)Segment40SetVolts</pv_name>
+      <x>105</x>
+      <y>475</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #581</name>
+      <text>Segment 40</text>
+      <y>475</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #584</name>
+      <pv_name>$(P)$(R)Segment40GetVolts</pv_name>
+      <x>315</x>
+      <y>475</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #588</name>
+      <pv_name>$(P)$(R)Segment40SetVolts</pv_name>
+      <x>190</x>
+      <y>475</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #592</name>
+    <pv_name>$(P)$(R)SetTiltAmplitude</pv_name>
+    <x>235</x>
+    <y>70</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #596</name>
+    <pv_name>$(P)$(R)SetTiltAngle</pv_name>
+    <x>235</x>
+    <y>95</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #600</name>
+    <pv_name>$(P)$(R)TiltArm1SetVolts</pv_name>
+    <x>235</x>
+    <y>120</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #604</name>
+    <pv_name>$(P)$(R)TiltArm2SetVolts</pv_name>
+    <x>235</x>
+    <y>145</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #608</name>
+    <pv_name>$(P)$(R)TiltArm3SetVolts</pv_name>
+    <x>235</x>
+    <y>170</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #612</name>
+    <x>15</x>
+    <y>70</y>
+    <width>130</width>
+    <height>120</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #615</name>
+      <text>Arm 1 volts</text>
+      <x>20</x>
+      <y>50</y>
+      <width>110</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #618</name>
+      <text>Amplitude (%)</text>
+      <width>130</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #621</name>
+      <text>Angle (deg)</text>
+      <x>20</x>
+      <y>25</y>
+      <width>110</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #624</name>
+      <text>Arm 2 volts</text>
+      <x>20</x>
+      <y>75</y>
+      <width>110</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #627</name>
+      <text>Arm 3 volts</text>
+      <x>20</x>
+      <y>100</y>
+      <width>110</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #630</name>
+    <x>150</x>
+    <y>70</y>
+    <width>80</width>
+    <height>120</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #633</name>
+      <pv_name>$(P)$(R)TiltArm1SetVolts</pv_name>
+      <y>50</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #637</name>
+      <pv_name>$(P)$(R)SetTiltAmplitude</pv_name>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #641</name>
+      <pv_name>$(P)$(R)SetTiltAngle</pv_name>
+      <y>25</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #645</name>
+      <pv_name>$(P)$(R)TiltArm2SetVolts</pv_name>
+      <y>75</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #649</name>
+      <pv_name>$(P)$(R)TiltArm3SetVolts</pv_name>
+      <y>100</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #653</name>
+    <pv_name>$(P)$(R)TiltArm1GetVolts</pv_name>
+    <x>360</x>
+    <y>120</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #657</name>
+    <pv_name>$(P)$(R)TiltArm2GetVolts</pv_name>
+    <x>360</x>
+    <y>145</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #661</name>
+    <pv_name>$(P)$(R)TiltArm3GetVolts</pv_name>
+    <x>360</x>
+    <y>169</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #665</name>
+    <pv_name>$(P)$(R)SetTiltAmplitude_RBV</pv_name>
+    <x>360</x>
+    <y>70</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #669</name>
+    <pv_name>$(P)$(R)SetTiltAngle_RBV</pv_name>
+    <x>360</x>
+    <y>95</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #673</name>
+    <x>460</x>
+    <y>70</y>
+    <width>395</width>
+    <height>295</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #676</name>
+      <pv_name>$(P)$(R)Segment1SetVolts</pv_name>
+      <x>105</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #680</name>
+      <text>Segment 1</text>
+      <x>10</x>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #683</name>
+      <pv_name>$(P)$(R)Segment1GetVolts</pv_name>
+      <x>315</x>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #687</name>
+      <pv_name>$(P)$(R)Segment1SetVolts</pv_name>
+      <x>190</x>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #691</name>
+      <pv_name>$(P)$(R)Segment2SetVolts</pv_name>
+      <x>105</x>
+      <y>25</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #695</name>
+      <text>Segment 2</text>
+      <x>10</x>
+      <y>25</y>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #698</name>
+      <pv_name>$(P)$(R)Segment2GetVolts</pv_name>
+      <x>315</x>
+      <y>25</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #702</name>
+      <pv_name>$(P)$(R)Segment2SetVolts</pv_name>
+      <x>190</x>
+      <y>25</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #706</name>
+      <pv_name>$(P)$(R)Segment3SetVolts</pv_name>
+      <x>105</x>
+      <y>50</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #710</name>
+      <text>Segment 3</text>
+      <x>10</x>
+      <y>50</y>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #713</name>
+      <pv_name>$(P)$(R)Segment3GetVolts</pv_name>
+      <x>315</x>
+      <y>50</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #717</name>
+      <pv_name>$(P)$(R)Segment3SetVolts</pv_name>
+      <x>190</x>
+      <y>50</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #721</name>
+      <pv_name>$(P)$(R)Segment4SetVolts</pv_name>
+      <x>105</x>
+      <y>75</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #725</name>
+      <text>Segment 4</text>
+      <x>10</x>
+      <y>75</y>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #728</name>
+      <pv_name>$(P)$(R)Segment4GetVolts</pv_name>
+      <x>315</x>
+      <y>75</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #732</name>
+      <pv_name>$(P)$(R)Segment4SetVolts</pv_name>
+      <x>190</x>
+      <y>75</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #736</name>
+      <pv_name>$(P)$(R)Segment5SetVolts</pv_name>
+      <x>105</x>
+      <y>100</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #740</name>
+      <text>Segment 5</text>
+      <x>10</x>
+      <y>100</y>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #743</name>
+      <pv_name>$(P)$(R)Segment5GetVolts</pv_name>
+      <x>315</x>
+      <y>100</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #747</name>
+      <pv_name>$(P)$(R)Segment5SetVolts</pv_name>
+      <x>190</x>
+      <y>100</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #751</name>
+      <pv_name>$(P)$(R)Segment6SetVolts</pv_name>
+      <x>105</x>
+      <y>125</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #755</name>
+      <text>Segment 6</text>
+      <x>10</x>
+      <y>125</y>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #758</name>
+      <pv_name>$(P)$(R)Segment6GetVolts</pv_name>
+      <x>315</x>
+      <y>125</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #762</name>
+      <pv_name>$(P)$(R)Segment6SetVolts</pv_name>
+      <x>190</x>
+      <y>125</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #766</name>
+      <pv_name>$(P)$(R)Segment7SetVolts</pv_name>
+      <x>105</x>
+      <y>150</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #770</name>
+      <text>Segment 7</text>
+      <x>10</x>
+      <y>150</y>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #773</name>
+      <pv_name>$(P)$(R)Segment7GetVolts</pv_name>
+      <x>315</x>
+      <y>150</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #777</name>
+      <pv_name>$(P)$(R)Segment7SetVolts</pv_name>
+      <x>190</x>
+      <y>150</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #781</name>
+      <pv_name>$(P)$(R)Segment8SetVolts</pv_name>
+      <x>105</x>
+      <y>175</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #785</name>
+      <text>Segment 8</text>
+      <x>10</x>
+      <y>175</y>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #788</name>
+      <pv_name>$(P)$(R)Segment8GetVolts</pv_name>
+      <x>315</x>
+      <y>175</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #792</name>
+      <pv_name>$(P)$(R)Segment8SetVolts</pv_name>
+      <x>190</x>
+      <y>175</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #796</name>
+      <pv_name>$(P)$(R)Segment9SetVolts</pv_name>
+      <x>105</x>
+      <y>200</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #800</name>
+      <text>Segment 9</text>
+      <x>10</x>
+      <y>200</y>
+      <width>90</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #803</name>
+      <pv_name>$(P)$(R)Segment9GetVolts</pv_name>
+      <x>315</x>
+      <y>200</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #807</name>
+      <pv_name>$(P)$(R)Segment9SetVolts</pv_name>
+      <x>190</x>
+      <y>200</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #811</name>
+      <pv_name>$(P)$(R)Segment10SetVolts</pv_name>
+      <x>105</x>
+      <y>225</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #815</name>
+      <text>Segment 10</text>
+      <y>225</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #818</name>
+      <pv_name>$(P)$(R)Segment10GetVolts</pv_name>
+      <x>315</x>
+      <y>225</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #822</name>
+      <pv_name>$(P)$(R)Segment10SetVolts</pv_name>
+      <x>190</x>
+      <y>225</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #826</name>
+      <pv_name>$(P)$(R)Segment11SetVolts</pv_name>
+      <x>105</x>
+      <y>250</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #830</name>
+      <text>Segment 11</text>
+      <y>250</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #833</name>
+      <pv_name>$(P)$(R)Segment11GetVolts</pv_name>
+      <x>315</x>
+      <y>250</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #837</name>
+      <pv_name>$(P)$(R)Segment11SetVolts</pv_name>
+      <x>190</x>
+      <y>250</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>text entry #841</name>
+      <pv_name>$(P)$(R)Segment12SetVolts</pv_name>
+      <x>105</x>
+      <y>275</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #845</name>
+      <text>Segment 12</text>
+      <y>275</y>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>text update #848</name>
+      <pv_name>$(P)$(R)Segment12GetVolts</pv_name>
+      <x>315</x>
+      <y>275</y>
+      <width>80</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="200" green="200" blue="200">
+        </color>
+      </background_color>
+      <format>1</format>
+      <show_units>false</show_units>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="scrollbar" version="2.0.0">
+      <name>valuator #852</name>
+      <pv_name>$(P)$(R)Segment12SetVolts</pv_name>
+      <x>190</x>
+      <y>275</y>
+      <width>120</width>
+      <bar_length>1.0</bar_length>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #856</name>
+    <x>750</x>
+    <y>40</y>
+    <width>200</width>
+    <height>21</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectangle #859</name>
+      <width>200</width>
+      <height>21</height>
+      <line_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </line_color>
+      <background_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #862</name>
+      <text>Segment Voltages</text>
+      <x>20</x>
+      <width>160</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #865</name>
+    <x>5</x>
+    <y>200</y>
+    <width>440</width>
+    <height>90</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectangle #868</name>
+      <x>105</x>
+      <y>7</y>
+      <width>230</width>
+      <height>21</height>
+      <line_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </line_color>
+      <background_color>
+        <color red="218" green="218" blue="218">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectangle #871</name>
+      <width>440</width>
+      <height>90</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>text #874</name>
+      <text>Temperatures (C)</text>
+      <x>140</x>
+      <y>7</y>
+      <width>160</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color red="10" green="0" blue="184">
+        </color>
+      </foreground_color>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>composite #877</name>
+      <x>35</x>
+      <y>35</y>
+      <width>371</width>
+      <height>45</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="group" version="2.0.0">
+        <name>composite #880</name>
+        <x>156</x>
+        <width>215</width>
+        <height>45</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="textupdate" version="2.0.0">
+          <name>text update #883</name>
+          <pv_name>$(P)$(R)MirrorTemperature</pv_name>
+          <x>115</x>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color red="200" green="200" blue="200">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>text #887</name>
+          <text>Mirror</text>
+          <x>50</x>
+          <width>60</width>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>text update #890</name>
+          <pv_name>$(P)$(R)ElectronicsTemperature</pv_name>
+          <x>115</x>
+          <y>25</y>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color red="200" green="200" blue="200">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>text #894</name>
+          <text>Electronics</text>
+          <y>25</y>
+          <width>110</width>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>composite #897</name>
+        <width>135</width>
+        <height>45</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="textupdate" version="2.0.0">
+          <name>text update #900</name>
+          <pv_name>$(P)$(R)IC1Temperature</pv_name>
+          <x>35</x>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color red="200" green="200" blue="200">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>text update #904</name>
+          <pv_name>$(P)$(R)IC2Temperature</pv_name>
+          <x>35</x>
+          <y>25</y>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color red="10" green="0" blue="184">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color red="200" green="200" blue="200">
+            </color>
+          </background_color>
+          <format>1</format>
+          <show_units>false</show_units>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>text #908</name>
+          <text>IC1</text>
+          <width>30</width>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>text #911</name>
+          <text>IC2</text>
+          <y>25</y>
+          <width>30</width>
+          <font>
+            <font family="Liberation Sans" style="REGULAR" size="16.0">
+            </font>
+          </font>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #914</name>
+    <x>730</x>
+    <y>611</y>
+    <width>260</width>
+    <height>35</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>composite #917</name>
+      <x>13</x>
+      <y>7</y>
+      <width>235</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="combo" version="2.0.0">
+        <name>menu #920</name>
+        <pv_name>$(P)$(R)ReadStatus.SCAN</pv_name>
+        <x>115</x>
+        <width>120</width>
+        <height>20</height>
+        <background_color>
+          <color red="115" green="223" blue="255">
+          </color>
+        </background_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>text #923</name>
+        <text>Status rate</text>
+        <width>110</width>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>rectangle #926</name>
+      <width>260</width>
+      <height>35</height>
+      <line_width>1</line_width>
+      <line_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <background_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+    </widget>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #929</name>
+    <x>127</x>
+    <y>300</y>
+    <width>200</width>
+    <height>21</height>
+    <line_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="218" green="218" blue="218">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #932</name>
+    <text>Zernike Values</text>
+    <x>147</x>
+    <y>300</y>
+    <width>160</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>rectangle #935</name>
+    <x>5</x>
+    <y>295</y>
+    <width>440</width>
+    <height>360</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #938</name>
+    <pv_name>$(P)$(R)ZernikeAst45Value</pv_name>
+    <x>113</x>
+    <y>330</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #942</name>
+    <text>Ast45</text>
+    <x>58</x>
+    <y>330</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #945</name>
+    <pv_name>$(P)$(R)ZernikeAst45Value_RBV</pv_name>
+    <x>323</x>
+    <y>330</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #949</name>
+    <pv_name>$(P)$(R)ZernikeAst45Value</pv_name>
+    <x>198</x>
+    <y>330</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #953</name>
+    <pv_name>$(P)$(R)ZernikeDefValue</pv_name>
+    <x>113</x>
+    <y>355</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #957</name>
+    <text>Def</text>
+    <x>78</x>
+    <y>355</y>
+    <width>30</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #960</name>
+    <pv_name>$(P)$(R)ZernikeDefValue_RBV</pv_name>
+    <x>323</x>
+    <y>355</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #964</name>
+    <pv_name>$(P)$(R)ZernikeDefValue</pv_name>
+    <x>198</x>
+    <y>355</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #968</name>
+    <pv_name>$(P)$(R)ZernikeAst0Value</pv_name>
+    <x>113</x>
+    <y>380</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #972</name>
+    <text>Ast0</text>
+    <x>68</x>
+    <y>380</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #975</name>
+    <pv_name>$(P)$(R)ZernikeAst0Value_RBV</pv_name>
+    <x>323</x>
+    <y>380</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #979</name>
+    <pv_name>$(P)$(R)ZernikeAst0Value</pv_name>
+    <x>198</x>
+    <y>380</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #983</name>
+    <pv_name>$(P)$(R)ZernikeTreYValue</pv_name>
+    <x>113</x>
+    <y>405</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #987</name>
+    <text>TreY</text>
+    <x>68</x>
+    <y>405</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #990</name>
+    <pv_name>$(P)$(R)ZernikeTreYValue_RBV</pv_name>
+    <x>323</x>
+    <y>405</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #994</name>
+    <pv_name>$(P)$(R)ZernikeTreYValue</pv_name>
+    <x>198</x>
+    <y>405</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #998</name>
+    <pv_name>$(P)$(R)ZernikeComXValue</pv_name>
+    <x>113</x>
+    <y>430</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #1002</name>
+    <text>ComX</text>
+    <x>68</x>
+    <y>430</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #1005</name>
+    <pv_name>$(P)$(R)ZernikeComXValue_RBV</pv_name>
+    <x>323</x>
+    <y>430</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #1009</name>
+    <pv_name>$(P)$(R)ZernikeComXValue</pv_name>
+    <x>198</x>
+    <y>430</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #1013</name>
+    <pv_name>$(P)$(R)ZernikeComYValue</pv_name>
+    <x>113</x>
+    <y>455</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #1017</name>
+    <text>ComY</text>
+    <x>68</x>
+    <y>455</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #1020</name>
+    <pv_name>$(P)$(R)ZernikeComYValue_RBV</pv_name>
+    <x>323</x>
+    <y>455</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #1024</name>
+    <pv_name>$(P)$(R)ZernikeComYValue</pv_name>
+    <x>198</x>
+    <y>455</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #1028</name>
+    <pv_name>$(P)$(R)ZernikeTreXValue</pv_name>
+    <x>113</x>
+    <y>480</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #1032</name>
+    <text>TreX</text>
+    <x>68</x>
+    <y>480</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #1035</name>
+    <pv_name>$(P)$(R)ZernikeTreXValue_RBV</pv_name>
+    <x>323</x>
+    <y>480</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #1039</name>
+    <pv_name>$(P)$(R)ZernikeTreXValue</pv_name>
+    <x>198</x>
+    <y>480</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #1043</name>
+    <pv_name>$(P)$(R)ZernikeTetYValue</pv_name>
+    <x>113</x>
+    <y>505</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #1047</name>
+    <text>TetY</text>
+    <x>68</x>
+    <y>505</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #1050</name>
+    <pv_name>$(P)$(R)ZernikeTetYValue_RBV</pv_name>
+    <x>323</x>
+    <y>505</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #1054</name>
+    <pv_name>$(P)$(R)ZernikeTetYValue</pv_name>
+    <x>198</x>
+    <y>505</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #1058</name>
+    <pv_name>$(P)$(R)ZernikeSAstYValue</pv_name>
+    <x>113</x>
+    <y>530</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #1062</name>
+    <text>SSAstY</text>
+    <x>48</x>
+    <y>530</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #1065</name>
+    <pv_name>$(P)$(R)ZernikeSAstYValue_RBV</pv_name>
+    <x>323</x>
+    <y>530</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #1069</name>
+    <pv_name>$(P)$(R)ZernikeSAstYValue</pv_name>
+    <x>198</x>
+    <y>530</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #1073</name>
+    <pv_name>$(P)$(R)ZernikeSAb3Value</pv_name>
+    <x>113</x>
+    <y>555</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #1077</name>
+    <text>SAb3</text>
+    <x>68</x>
+    <y>555</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #1080</name>
+    <pv_name>$(P)$(R)ZernikeSAb3Value_RBV</pv_name>
+    <x>323</x>
+    <y>555</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #1084</name>
+    <pv_name>$(P)$(R)ZernikeSAb3Value</pv_name>
+    <x>198</x>
+    <y>555</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #1088</name>
+    <pv_name>$(P)$(R)ZernikeSAstXValue</pv_name>
+    <x>113</x>
+    <y>580</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #1092</name>
+    <text>SAstX</text>
+    <x>58</x>
+    <y>580</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #1095</name>
+    <pv_name>$(P)$(R)ZernikeSAstXValue_RBV</pv_name>
+    <x>323</x>
+    <y>580</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #1099</name>
+    <pv_name>$(P)$(R)ZernikeSAstXValue</pv_name>
+    <x>198</x>
+    <y>580</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>text entry #1103</name>
+    <pv_name>$(P)$(R)ZernikeTetXValue</pv_name>
+    <x>113</x>
+    <y>605</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="115" green="223" blue="255">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>text #1107</name>
+    <text>TetX</text>
+    <x>68</x>
+    <y>605</y>
+    <width>40</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>text update #1110</name>
+    <pv_name>$(P)$(R)ZernikeTetXValue_RBV</pv_name>
+    <x>323</x>
+    <y>605</y>
+    <width>80</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="10" green="0" blue="184">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="200" green="200" blue="200">
+      </color>
+    </background_color>
+    <format>1</format>
+    <show_units>false</show_units>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="scrollbar" version="2.0.0">
+    <name>valuator #1114</name>
+    <pv_name>$(P)$(R)ZernikeTetXValue</pv_name>
+    <x>198</x>
+    <y>605</y>
+    <width>120</width>
+    <bar_length>1.0</bar_length>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #1118</name>
+    <x>83</x>
+    <y>630</y>
+    <width>285</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #1121</name>
+      <text>Reset Zernike Values</text>
+      <width>200</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #1124</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(R)ResetZernikeValues</pv_name>
+          <value>1</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)$(R)ResetZernikeValues</pv_name>
+      <text>Reset</text>
+      <x>205</x>
+      <width>80</width>
+      <height>20</height>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>composite #1127</name>
+    <x>708</x>
+    <y>575</y>
+    <width>305</width>
+    <height>20</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>text #1130</name>
+      <text>Reset Segment Voltages</text>
+      <width>220</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>message button #1133</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(R)ResetSegmentVolts</pv_name>
+          <value>1</value>
+          <description>Write</description>
+        </action>
+      </actions>
+      <pv_name>$(P)$(R)ResetSegmentVolts</pv_name>
+      <text>Reset</text>
+      <x>225</x>
+      <width>80</width>
+      <height>20</height>
+      <background_color>
+        <color red="115" green="223" blue="255">
+        </color>
+      </background_color>
+    </widget>
+  </widget>
+</display>
