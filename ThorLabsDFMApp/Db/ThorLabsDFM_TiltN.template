@@ -1,0 +1,31 @@
+record(ao,"$(P)$(R)TiltArm$(N)SetVolts") {
+    field(DESC, "Tilt arm $(N) set volts")
+    field(PREC, "3")
+    field(DRVL, "0")
+    field(LOPR, "0")
+    field(DRVH, "290")
+    field(HOPR, "200")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT), $(ADDR))TLDFM_SetTiltVolts")
+}
+
+record(ai,"$(P)$(R)TiltArm$(N)SetVolts_RBV") {
+    field(DESC, "Tilt arm $(N) set volts")
+    field(PREC, "3")
+    field(LOPR, "0")
+    field(HOPR, "200")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT), $(ADDR))TLDFM_SetTiltVolts")
+    field(SCAN, "I/O Intr")
+}
+
+record(ai,"$(P)$(R)TiltArm$(N)GetVolts") {
+    field(DESC, "Tilt arm $(N) get volts")
+    field(PREC, "3")
+    field(LOPR, "0")
+    field(HOPR, "200")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT), $(ADDR))TLDFM_MeasuredTiltVolts")
+    field(SCAN, "I/O Intr")
+}
+

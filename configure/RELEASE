@@ -1,0 +1,21 @@
+#RELEASE Location of external products
+# Run "gnumake clean uninstall install" in the application
+# top directory each time this file is changed.
+
+TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+
+# If you don't want to install into $(TOP) then
+# define INSTALL_LOCATION_APP here
+#INSTALL_LOCATION_APP=<fullpathname>
+
+SUPPORT=/corvette/home/epics/devel
+
+THORLABSDFM=$(SUPPORT)/ThorLabsDFM-1-0
+ASYN=$(SUPPORT)/asyn-4-45
+AUTOSAVE=$(SUPPORT)/autosave-5-11
+EPICS_BASE=/corvette/usr/local/epics-devel/base-7.0.9
+
+-include $(TOP)/../RELEASE.local
+-include $(TOP)/../RELEASE.$(EPICS_HOST_ARCH).local
+-include $(TOP)/configure/RELEASE.local
+
