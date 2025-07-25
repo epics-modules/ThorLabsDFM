@@ -1,0 +1,21 @@
+record(ao,"$(P)$(R)Zernike$(NAME)Value") {
+    field(DESC, "Zernike $(NAME) value")
+    field(PREC, "3")
+    field(DRVL, "-1")
+    field(LOPR, "-1")
+    field(DRVH, "1")
+    field(HOPR, "1")
+    field(DTYP, "asynFloat64")
+    field(OUT,  "@asyn($(PORT), $(ADDR))TLDFM_SetZernikeValue")
+    info(asyn:READBACK, "1")
+}
+
+record(ai,"$(P)$(R)Zernike$(NAME)Value_RBV") {
+    field(DESC, "Zernike $(NAME) value")
+    field(PREC, "3")
+    field(LOPR, "-1")
+    field(HOPR, "1")
+    field(DTYP, "asynFloat64")
+    field(INP,  "@asyn($(PORT), $(ADDR))TLDFM_SetZernikeValue")
+    field(SCAN, "I/O Intr")
+}
