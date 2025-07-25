@@ -7,6 +7,7 @@ record(ao,"$(P)$(R)Segment$(N)SetVolts") {
     field(HOPR, "200")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT), $(ADDR))TLDFM_SetSegmentVolts")
+    info(asyn:READBACK, "1")
 }
 
 record(ai,"$(P)$(R)Segment$(N)SetVolts_RBV") {
