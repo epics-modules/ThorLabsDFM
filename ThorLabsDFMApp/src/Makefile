@@ -27,6 +27,7 @@ $(PROD_NAME)_DBD += ThorLabsDFMSupport.dbd
 $(PROD_NAME)_SRCS   += $(PROD_NAME)_registerRecordDeviceDriver.cpp
 $(PROD_NAME)_SRCS   += $(PROD_NAME)Main.cpp
 $(PROD_NAME)_LIBS   += ThorLabsDFM
+$(PROD_NAME)_LIBS   += TLDFMX_64
 $(PROD_NAME)_LIBS   += TLDFM_64
 $(PROD_NAME)_LIBS   += asyn 
 $(PROD_NAME)_LIBS   += autosave
