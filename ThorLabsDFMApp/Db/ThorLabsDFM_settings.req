@@ -1,3 +1,15 @@
 $(P)$(R)ReadStatus.SCAN
 $(P)$(R)SetTiltAmplitude
 $(P)$(R)SetTiltAngle
+$(P)$(R)ZernikeAst45Value
+$(P)$(R)ZernikeDefValue
+$(P)$(R)ZernikeAst0Value
+$(P)$(R)ZernikeTreYValue
+$(P)$(R)ZernikeComXValue
+$(P)$(R)ZernikeComYValue
+$(P)$(R)ZernikeTreXValue
+$(P)$(R)ZernikeTetYValue
+$(P)$(R)ZernikeSAstYValue
+$(P)$(R)ZernikeSAb3Value
+$(P)$(R)ZernikeSAstXValue
+$(P)$(R)ZernikeTetXValue
