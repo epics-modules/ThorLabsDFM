@@ -5,6 +5,7 @@ record(ao,"$(P)$(R)Zernike$(NAME)Value") {
     field(LOPR, "-1")
     field(DRVH, "1")
     field(HOPR, "1")
+    field(PINI, "YES")
     field(DTYP, "asynFloat64")
     field(OUT,  "@asyn($(PORT), $(ADDR))TLDFM_SetZernikeValue")
     info(asyn:READBACK, "1")
