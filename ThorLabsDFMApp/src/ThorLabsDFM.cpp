@@ -209,7 +209,6 @@ asynStatus ThorLabsDFM::writeInt32( asynUser *pasynUser, epicsInt32 value)
     this->getAddress(pasynUser, &address);
     /* Set the parameter and readback in the parameter library.  This may be overwritten later but that's OK */
     setIntegerParam(address, function, value);
-    
     if (function == TLDFM_ReadStatus) {
         err = this->readVoltages();
         if (err) {
@@ -280,6 +279,11 @@ asynStatus ThorLabsDFM::writeFloat64( asynUser *pasynUser, epicsFloat64 value)
         getDoubleParam(TLDFM_SetTiltAngle, &angle);
         // We use % for amplitude, SDK wants 0-1.
         err = TLDFM_set_tilt_amplitude_angle(instrHdl_, amplitude/100., angle);
+        if (err) goto done;
+        err = TLDFM_get_tilt_voltages(instrHdl_, voltages);
+        for (int i=0; i<THORLABS_MAX_TILT_VOLTAGES; i++) {
+            setDoubleParam(i, TLDFM_SetTiltVolts, voltages[i]);
+        }       
     }
     else if (function == TLDFM_SetZernikeValue) {
         for (int i=0; i<THORLABS_MAX_ZERNIKE_VALUES; i++) {
